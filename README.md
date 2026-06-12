@@ -1,68 +1,24 @@
 # Quorra AI Marketplace 🛒🤖
 
-![Quorra AI Marketplace Banner](YOUR_IMAGE_LINK_HERE)
+An AI-powered e-commerce website with a smart shopping assistant.
 
 ## 🌐 Live Website
 
 https://prithiviraajj-r.github.io/quorra-ai-ecommerce/
 
----
+## 📌 About Project
 
-## 📌 Project Overview
-
-Quorra AI Marketplace is an AI-powered e-commerce platform that provides a smart shopping experience with an intelligent shopping assistant.
-
-The platform helps users discover products, search items, filter products, manage carts, and get AI-based recommendations.
-
-![AI Shopping Assistant](YOUR_IMAGE_LINK_HERE)
-
----
+Quorra AI Marketplace is a modern e-commerce web application that helps users search products, filter items, manage cart, and get AI-based product recommendations.
 
 ## ✨ Features
 
-### 🤖 AI Shopping Assistant
-
-Quorra AI helps users find products based on:
-
-- Budget
-- Category
-- Ratings
-- Deals
-- User requirements
-
-Example:
-
-"Recommend laptop under $900"
-
-![AI Recommendation Flow](YOUR_IMAGE_LINK_HERE)
-
----
-
-### 🛍️ Smart Product Marketplace
-
-Features:
-
-- Product browsing
-- Product search
-- Category filtering
-- Price filtering
-- Product ratings
-- Discount offers
-
----
-
-### 🛒 Cart Management
-
-Users can:
-
-- Add products
-- Increase/decrease quantity
-- Calculate subtotal
-- View total price
-
-![E-commerce Dashboard](YOUR_IMAGE_LINK_HERE)
-
----
+- 🤖 AI Shopping Assistant
+- 🔍 Product Search
+- 🛍️ Product Filtering
+- ⭐ Product Ratings
+- 🛒 Add to Cart
+- 💰 Price Calculation
+- 📱 Responsive Design
 
 ## 🛠️ Technologies Used
 
@@ -70,6 +26,32 @@ Users can:
 - CSS3
 - JavaScript
 
----
-
 ## 📂 Project Structure
+
+
+quorra-ai-ecommerce
+│
+├── index.html
+├── styles.css
+├── app.js
+└── README.md
+
+
+## 🚀 How to Run
+
+1. Clone the repository
+
+
+git clone https://github.com/prithiviraajj-r/quorra-ai-ecommerce.git
+
+
+2. Open `index.html` in your browser.
+
+## 👨‍💻 Author
+
+Prithiviraajj R
+
+GitHub:
+https://github.com/prithiviraajj-r
+
+This will look clean and professional on GitHub.
