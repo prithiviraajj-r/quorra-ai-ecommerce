@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quorra AI Marketplace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Quorra home">
+      <span class="brand-mark">Q</span>
+      <span>Quorra</span>
+    </a>
+
+    <form class="search-shell" id="searchForm" role="search">
+      <select id="categorySelect" aria-label="Product category">
+        <option value="all">All</option>
+        <option value="electronics">Electronics</option>
+        <option value="home">Home</option>
+        <option value="fashion">Fashion</option>
+        <option value="beauty">Beauty</option>
+        <option value="sports">Sports</option>
+      </select>
+      <input id="searchInput" type="search" placeholder="Search Quorra" autocomplete="off">
+      <button type="submit" aria-label="Search products">
+        <span>Search</span>
+      </button>
+    </form>
+
+    <nav class="header-actions" aria-label="Quick actions">
+      <button class="ghost-action" id="openAssistantTop" type="button">AI Assistant</button>
+      <button class="cart-button" id="cartButton" type="button" aria-label="Open cart">
+        <span class="cart-count" id="cartCount">0</span>
+        Cart
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">AI-powered e-commerce</p>
+        <h1>Shop faster with a personal assistant that knows the catalog.</h1>
+        <p>Discover deals, compare products, build your cart, and ask Quorra AI for gift ideas, budget picks, or category-specific recommendations.</p>
+        <div class="hero-actions">
+          <button class="primary-button" id="startAssistant" type="button">Ask Quorra AI</button>
+          <a class="secondary-link" href="#products">Explore products</a>
+        </div>
+      </div>
+      <div class="hero-panel" aria-label="Featured shopping assistant preview">
+        <div class="assistant-card">
+          <div class="assistant-head">
+            <span class="pulse"></span>
+            <strong>Quorra AI</strong>
+          </div>
+          <p id="heroAssistantText">Tell me your budget, who it is for, and what matters most. I will shortlist the best products instantly.</p>
+        </div>
+        <div class="deal-stack">
+          <article>
+            <span>Today</span>
+            <strong>Up to 38% off smart tech</strong>
+          </article>
+          <article>
+            <span>Fast delivery</span>
+            <strong>2-day shipping on 2,400+ items</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="service-strip" aria-label="Store benefits">
+      <div><strong>2-day delivery</strong><span>On eligible orders</span></div>
+      <div><strong>AI recommendations</strong><span>Personalized shopping help</span></div>
+      <div><strong>Secure checkout</strong><span>Protected payments</span></div>
+      <div><strong>Easy returns</strong><span>30-day return window</span></div>
+    </section>
+
+    <section class="commerce-layout" id="products">
+      <aside class="filters" aria-label="Shopping filters">
+        <div class="filter-heading">
+          <h2>Filters</h2>
+          <button id="resetFilters" type="button">Reset</button>
+        </div>
+
+        <label>
+          Sort
+          <select id="sortSelect">
+            <option value="featured">Featured</option>
+            <option value="rating">Top rated</option>
+            <option value="priceAsc">Price: low to high</option>
+            <option value="priceDesc">Price: high to low</option>
+          </select>
+        </label>
+
+        <label>
+          Max price
+          <input id="priceRange" type="range" min="20" max="1200" value="1200">
+          <span id="priceLabel">$1,200</span>
+        </label>
+
+        <fieldset>
+          <legend>Delivery</legend>
+          <label class="check-row"><input type="checkbox" id="primeOnly"> QuorraFast shipping</label>
+          <label class="check-row"><input type="checkbox" id="dealOnly"> Deals only</label>
+        </fieldset>
+      </aside>
+
+      <section class="product-zone" aria-live="polite">
+        <div class="zone-head">
+          <div>
+            <p class="eyebrow">Marketplace</p>
+            <h2 id="resultTitle">Recommended for you</h2>
+          </div>
+          <span id="resultCount">0 products</span>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+      </section>
+    </section>
+  </main>
+
+  <aside class="assistant-dock" id="assistantDock" aria-label="AI shopping assistant">
+    <div class="dock-head">
+      <div>
+        <span class="status-dot"></span>
+        <strong>Quorra AI Assistant</strong>
+      </div>
+      <button id="closeAssistant" type="button" aria-label="Close assistant">x</button>
+    </div>
+    <div class="chat-log" id="chatLog"></div>
+    <form class="chat-form" id="assistantForm">
+      <input id="assistantInput" type="text" placeholder="Try: best laptop under $900" autocomplete="off">
+      <button type="submit">Send</button>
+    </form>
+    <div class="quick-prompts">
+      <button type="button" data-prompt="Find gifts under $100">Gifts under $100</button>
+      <button type="button" data-prompt="Recommend smart home deals">Smart home deals</button>
+      <button type="button" data-prompt="What should I buy for fitness?">Fitness picks</button>
+    </div>
+  </aside>
+
+  <aside class="cart-panel" id="cartPanel" aria-label="Shopping cart">
+    <div class="cart-head">
+      <h2>Your Cart</h2>
+      <button id="closeCart" type="button" aria-label="Close cart">x</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-summary">
+      <div><span>Subtotal</span><strong id="subtotal">$0</strong></div>
+      <div><span>Estimated delivery</span><strong id="delivery">$0</strong></div>
+      <div class="total"><span>Total</span><strong id="total">$0</strong></div>
+      <button class="checkout-button" type="button">Proceed to Checkout</button>
+    </div>
+  </aside>
+
+  <div class="overlay" id="overlay"></div>
+  <script src="app.js"></script>
+</body>
+</html>
