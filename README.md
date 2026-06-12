@@ -51,7 +51,6 @@ git clone https://github.com/prithiviraajj-r/quorra-ai-ecommerce.git
 
 Prithiviraajj R
 
-GitHub:
-https://github.com/prithiviraajj-r
 
-This will look clean and professional on GitHub.
+
+
